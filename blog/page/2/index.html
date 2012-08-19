@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Included file &#8216;JB/setup&#8217; not found in _includes directory sql query to remove whitespace and quotation marks works in sqlite and mysql, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dnfehren.github.com/blog/page/2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dnfehren.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/18/sql-to-remove-whitespace-and-quotes/">Sql to Remove Whitespace and Quotes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-18T00:00:00-06:00" pubdate data-updated="true">Jan 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>sql query to remove whitespace and quotation marks</h2>
+
+<p>works in sqlite and mysql, probably others.</p>
+
+<div>
+  <pre><code class='sql'>UPDATE tablename SET colname=trim(replace(colname, '&quot;',''));</code></pre>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/17/solarized-linux-term/">Solarized Linux Term</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-17T00:00:00-06:00" pubdate data-updated="true">Jan 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>Solarized Linux Console (without X)</h2>
+
+<p>The start of a fully Solarized linux/bash console.</p>
+
+<p>add colors to .bashrc based on the format here</p>
+
+<p><a href="http://phraktured.net/linux-console-colors.html">phraktured.net: Linux Console Colors</a></p>
+
+<p>and the colors listed here</p>
+
+<p><a href="http://pastebin.com/95M45iF2">Solarized Xdefaults from someone on pastebin</a></p>
+
+<p><a href="http://ethanschoonover.com/solarized">Solarized Reference</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/16/restore-internet-connection-to-imported-virtualbox/">Restore Internet Connection to Imported Virtualbox</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-16T00:00:00-06:00" pubdate data-updated="true">Jan 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>restore Internet connection on imported virtualbox appliance</h2>
+
+<p>after importing a linux guest on a windows 7 host if there is no network connection available try&#8230;</p>
+
+<div>
+  <pre><code class='bash'>rm /etc/udev/rules.d/70-persistent-net.rules</code></pre>
+</div>
+
+
+<p>&#8230;and then reboot.</p>
+
+<p>Seems to work without unintended consequences.</p>
+
+<h3>reference</h3>
+
+<p><a href="http://superuser.com/questions/121804/internet-connection-fails-in-ubuntu-on-virtualbox-when-virtual-machine-is-created">networking - Internet connection fails in Ubuntu on VirtualBox when virtual machine is created from &#8220;Import appliance&#8221; - Super User</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/15/refresh-mysql-cli-autocomplete/">Refresh Mysql Cli Autocomplete</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-15T00:00:00-06:00" pubdate data-updated="true">Jan 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<p>refresh command line MySQL autocompletion</p>
+
+<div>
+  <pre><code class='sql'>\#</code></pre>
+</div>
+
+
+<p>or</p>
+
+<div>
+  <pre><code class='sql'>REHASH</code></pre>
+</div>
+
+
+<p><a href="http://www.phpmag.ru/2009/01/28/mysql-how-to-enable-auto-completion/">Victor Farazdagi » MySQL Client: how to enable auto-completion</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/14/python-csv-dictwriter-needs-tuple-for-fieldnames/">Python Csv Dictwriter Needs Tuple for Fieldnames</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-14T00:00:00-06:00" pubdate data-updated="true">Jan 14<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>dictWriter needs a tuple for fieldnames</h2>
+
+<div>
+  <pre><code class='python'>fieldnames = ('Title 1', 'Title 2', 'Title 3')</code></pre>
+</div>
+
+
+<p><a href="http://www.doughellmann.com/PyMOTW/csv/">csv – Comma-separated value files - Python Module of the Week</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/13/pymongo-rename-needs-4-arguments/">Pymongo Rename Needs 4 Arguments</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-13T00:00:00-06:00" pubdate data-updated="true">Jan 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>pyMongo update $rename requires 4 bool arguments</h2>
+
+<p>this works on the command line for collection-wide rename:</p>
+
+<div>
+  <pre><code class='bash'>db.raw_row_collection.update({}, {$rename : {'bill_amt' : 'bill_amount__UU'}}, false, true)</code></pre>
+</div>
+
+
+<p>this works for a collection wide rename in python:</p>
+
+<div>
+  <pre><code class='python'>row_collection.update( {},
+{'$rename' : {'bill_amt' : 'bill_amount'}},
+False,
+False,
+True,
+True
+)</code></pre>
+</div>
+
+
+<p><a href="http://www.mongodb.org/display/DOCS/Updating#Updating-update%28%29">Updating - MongoDB</a></p>
+
+<p><a href="http://api.mongodb.org/python/current/api/pymongo/collection.html#pymongo.collection.Collection.update">collection – Collection level operations — PyMongo v2.0.1 documentation</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/12/phpmyadmin-date-formatting/">Phpmyadmin Date Formatting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-12T00:00:00-06:00" pubdate data-updated="true">Jan 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>myphpadmin date formating</h2>
+
+<p>for exporting with a date in the file name use</p>
+
+<p>[export_file_name_whatever]<em>%G</em>%m_%d</p>
+
+<p>results in&#8230;</p>
+
+<p>file_name_2011_04_28</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/11/linux-cli-cdrom-access/">Linux Cli Cdrom Access</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-11T00:00:00-06:00" pubdate data-updated="true">Jan 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>Linux command line cdrom access</h2>
+
+<div>
+  <pre><code class='bash'>sudo lshw -C disk
+sudo mount /dev/cdrom -t iso9660 -r /media/cdrom</code></pre>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/11/install-wkhtmltopdf-on-amazon-aws/">Install Wkhtmltopdf on Amazon Aws</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-11T00:00:00-06:00" pubdate data-updated="true">Jan 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>to install wkhtmltopdf on AWS micro linux</h2>
+
+<p>Use yum to install font-config and urw-fonts. This dealt with the &#8220;wkhtmltopdf: error while loading shared libraries: libfontconfig.so.1: cannot open shared object file: No such file or directory&#8221; error and the output pdf only having squares instead of readable characters.</p>
+
+<p>Download the proper static binary from <a href="http://code.google.com/p/wkhtmltopdf/downloads/list">http://code.google.com/p/wkhtmltopdf/downloads/list</a>. Make sure that you know if you are running on a 32 or 64 bit system.</p>
+
+<p>Untar the downloaded file. Optionally, rename the binary to something without the extra information.</p>
+
+<p>Copy or move the binary file to /usr/bin</p>
+
+<p>help from</p>
+
+<p><a href="http://code.google.com/p/wkhtmltopdf/wiki/static">http://code.google.com/p/wkhtmltopdf/wiki/static</a></p>
+
+<p><a href="http://code.google.com/p/wkhtmltopdf/issues/detail?id=222">http://code.google.com/p/wkhtmltopdf/issues/detail?id=222</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/10/install-matplotlib-on-debian-testing/">Install Matplotlib on Debian Testing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-10T00:00:00-06:00" pubdate data-updated="true">Jan 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>installing matplotlib on debian testing</h2>
+
+<p>what a pain&#8230;</p>
+
+<p>more notes later, but I installed with pip.</p>
+
+<p>Required the installing or updating following packages through apt-get before it would install and work in ipython (I think - and check versions to make sure in future)</p>
+
+<p><em>numpy
+</em>python-dateutil
+<em>python-dev
+</em>libfreetype6-dev
+<em>gcc
+</em>g++</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/05/12/mysql-get-all-table-row-counts/">Mysql Get All Table Row Counts</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/20/changing-linux-terminal-highlighting-for-file-types/">Changing Linux Terminal Highlighting For File Types</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/28/get-decimal-results-in-python-division/">Get Decimal Results In Python Division</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/24/debian-rc-local-example-for-automounting-virtualbox-shared-folders/">Debian Rc Local Example For Automounting Virtualbox Shared Folders</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/23/rake-on-crunchbang/">rake on crunchbang</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

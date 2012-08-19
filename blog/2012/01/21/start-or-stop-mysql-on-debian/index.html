@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Start Or Stop Mysql On Debian - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Included file &#8216;JB/setup&#8217; not found in _includes directory If you can&#8217;t use init.d to stop/start/restart mysql server on Debian &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dnfehren.github.com/blog/2012/01/21/start-or-stop-mysql-on-debian/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dnfehren.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Start or Stop Mysql on Debian</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-21T00:00:00-06:00" pubdate data-updated="true">Jan 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>If you can&#8217;t use init.d to stop/start/restart mysql server on Debian</h2>
+
+<p>Debian (or CrunchBang) repository installs of mysql create a debian-sys-maint user that is used to startup and shutdown the database server via the /etc/init.d/mysql script. If you import all databases from another server, including the mysql database, this will be overwritten and init.d won&#8217;t work. So either don&#8217;t import the users table or add the debian-sys-maint users back in at the end, the user should have SHUTDOWN and SELECT privileges but doesn&#8217;t need others.</p>
+
+<p><a href="http://dev.mysql.com/doc/refman/5.0/en/resetting-permissions.html#resetting-permissions-unix">http://dev.mysql.com/doc/refman/5.0/en/resetting-permissions.html#resetting-permissions-unix</a></p>
+
+<p><a href="http://www.linuxquestions.org/questions/linux-software-2/mysql-debian-sys-maint-password-changed-by-accident-possible-to-change-it-back-216586/">mysql: debian-sys-maint password changed by accident, possible to change it back?</a></p>
+
+<p><a href="http://serverfault.com/questions/32692/cant-start-stop-mysql-service">http://serverfault.com/questions/32692/cant-start-stop-mysql-service</a></p>
+
+<p><a href="http://www.debian-administration.org/articles/442">http://www.debian-administration.org/articles/442</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-21T00:00:00-06:00" pubdate data-updated="true">Jan 21<span>st</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/blog/'>blog</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://dnfehren.github.com/blog/2012/01/21/start-or-stop-mysql-on-debian/" data-via="" data-counturl="http://dnfehren.github.com/blog/2012/01/21/start-or-stop-mysql-on-debian/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/01/20/start-denyhosts-on-amazon-aws/" title="Previous Post: Start Denyhosts On Amazon Aws">&laquo; Start Denyhosts On Amazon Aws</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/02/01/access-properties-of-r-crosstable/" title="Next Post: Access Properties Of R Crosstable">Access Properties Of R Crosstable &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/05/12/mysql-get-all-table-row-counts/">Mysql Get All Table Row Counts</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/20/changing-linux-terminal-highlighting-for-file-types/">Changing Linux Terminal Highlighting For File Types</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/28/get-decimal-results-in-python-division/">Get Decimal Results In Python Division</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/24/debian-rc-local-example-for-automounting-virtualbox-shared-folders/">Debian Rc Local Example For Automounting Virtualbox Shared Folders</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/23/rake-on-crunchbang/">rake on crunchbang</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

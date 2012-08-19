@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: blog | My Octopress Blog]]></title>
+  <link href="http://dnfehren.github.com/blog/categories/blog/atom.xml" rel="self"/>
+  <link href="http://dnfehren.github.com/"/>
+  <updated>2012-08-19T14:56:28-05:00</updated>
+  <id>http://dnfehren.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql Get All Table Row Counts]]></title>
+    <link href="http://dnfehren.github.com/blog/2012/05/12/mysql-get-all-table-row-counts/"/>
+    <updated>2012-05-12T00:00:00-05:00</updated>
+    <id>http://dnfehren.github.com/blog/2012/05/12/mysql-get-all-table-row-counts</id>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
+
+<h2>Command line mysql for row counts for all tables in a database</h2>
+
+<p>NB count is approximate for innodb tables</p>
+
+<p><div>
+  <pre><code class='sql'>SELECT table_name, TABLE_ROWS FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '{your_db}';'</code></pre>
+</div>
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Changing Linux Terminal Highlighting For File Types]]></title>
+    <link href="http://dnfehren.github.com/blog/2012/03/20/changing-linux-terminal-highlighting-for-file-types/"/>
+    <updated>2012-03-20T00:00:00-05:00</updated>
+    <id>http://dnfehren.github.com/blog/2012/03/20/changing-linux-terminal-highlighting-for-file-types</id>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
+
+<h2>Alter colors for file types in linux terminal</h2>
+
+<p>The blue on green highlighting that results in a default debian color scheme when it is displaying VirtualBox Shared folders is hard to read.</p>
+
+<p>To change it you need to create a new .dircolors file in ~/ by using dircolors -p > ~./dircolors.</p>
+
+<p>Then edit the color specifications for OTHER_WRITEABLE (non-sticky) to something more suitable.</p>
+
+<p>The man page says a ~/.dir_colors file will be recognized and used but the cruchbang (and maybe debian) .bashrc looks for a ~/.dircolors file intead. Change the color file name or edit the .bashrc to make it work.</p>
+
+<p>I use a white text with a blue background for the directories, which looks like</p>
+
+<p>OTHER_WRITEABLE 37;44</p>
+
+<p>source .bashrc when you're done editing.</p>
+
+<p><a href="http://askubuntu.com/questions/17299/color-meanings-in-terminal">Explanation at Ask Ubuntu</a><br/>
+<a href="http://forums.debian.net/viewtopic.php?t=11773">Debian User Forum Example</a><br/>
+<a href="http://linux.die.net/man/5/dir_colors">dircolors man page</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Get Decimal Results In Python Division]]></title>
+    <link href="http://dnfehren.github.com/blog/2012/02/28/get-decimal-results-in-python-division/"/>
+    <updated>2012-02-28T00:00:00-06:00</updated>
+    <id>http://dnfehren.github.com/blog/2012/02/28/get-decimal-results-in-python-division</id>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
+
+<p>Use float() to get decimal answers to division fuctions in python</p>
+
+<p><div>
+  <pre><code class='python'>some_data_value = 100
+1 / float(some_data_value) #returns 0.01
+1 / 100.0 #also returns 0.01
+float(1/100) #returns 0.0, which is a float, but might not be what you wanted</code></pre>
+</div>
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Debian Rc Local Example For Automounting Virtualbox Shared Folders]]></title>
+    <link href="http://dnfehren.github.com/blog/2012/02/24/debian-rc-local-example-for-automounting-virtualbox-shared-folders/"/>
+    <updated>2012-02-24T00:00:00-06:00</updated>
+    <id>http://dnfehren.github.com/blog/2012/02/24/debian-rc-local-example-for-automounting-virtualbox-shared-folders</id>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
+
+<h2>Automatically mounting virtuabox shared folders when the guest starts, with read and write permissions</h2>
+
+<p>Add this to your /etc/rc.local for each directory you want to have automatically available</p>
+
+<p> mount.vboxsf -w -o fmode=0777,dmode=0777 proj /home/dnfehren/projects</p>
+
+<h3>Reference</h3>
+
+<p><a href="http://ubuntuforums.org/showthread.php?t=974627&amp;page=2">Ubuntu Forums</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Access Properties Of R Crosstable]]></title>
+    <link href="http://dnfehren.github.com/blog/2012/02/01/access-properties-of-r-crosstable/"/>
+    <updated>2012-02-01T00:00:00-06:00</updated>
+    <id>http://dnfehren.github.com/blog/2012/02/01/access-properties-of-r-crosstable</id>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
+
+<h2>Accessing properties of CrossTable</h2>
+
+<pre><code>conv_cross &amp;lt;- CrossTable(data_set$col1, data_set$col2)
+conv_table &amp;lt;- conv_cross$prop.row
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
