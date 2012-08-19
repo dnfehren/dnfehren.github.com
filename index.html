@@ -9,7 +9,7 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Included file &#8216;JB/setup&#8217; not found in _includes directory Command line mysql for row counts for all tables in a database NB count is &hellip;">
+  <meta name="description" content="if you&#8217;ve setup port forwarding but you cannot see the content that the flask server is supposedly serving on port 5000, even though ports like &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,128 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/20/use-python-flask-server-through-nat-virtualbox-guest/">Use Python Flask Server Through Nat Virtualbox Guest</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-20T00:00:00-05:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>if you&#8217;ve setup port forwarding but you cannot see the content that the flask server is supposedly serving on port 5000, even though ports like 80 or 22 are working it might be because (as outlined in the docs) flask, by default, serves only on the localhost.</p>
+
+<p>VBoxManage.exe modifyvm &#8220;VMnameInQuotes&#8221; &#8211;natpf1 &#8220;guestFlask,tcp,,5555,,5000&#8221;</p>
+
+<p>if you check netstat -nao  while the server is running you&#8217;ll see a line like this (amoung other things, you could also use netstat -nao | grep 5000)
+tcp        0      0 127.0.0.1:5000          0.0.0.0:*               LISTEN      off (0.00/0/0)</p>
+
+<p>to be able to load the app on that port in your host machine you will need to follow the following steps
+first stop the server</p>
+
+<p>then change your</p>
+
+<p>app.run()</p>
+
+<p>to</p>
+
+<p>app.run(host=&#8221;0.0.0.0&#8221;)</p>
+
+<p>and restart the server</p>
+
+<p>netstat -nao should now show
+tcp        0      0 0.0.0.0:5000            0.0.0.0:*               LISTEN      off (0.00/0/0)</p>
+
+<p>and you should be able to access the guest server from the host using localhost:5555 (or whatever other port you forwarded it to)</p>
+
+<p>References
+https://groups.google.com/forum/?fromgroups#!topic/utahpython/RFFdwBVKWz0
+http://flask.pocoo.org/docs/quickstart/#a-minimal-application</p>
+
+<h1>How does it work?</h1>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/20/mysql-reset-root-passwords/">Mysql Reset Root Passwords</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-20T00:00:00-05:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div>
+  <pre><code class='bash'>user$sudo service mysql stop
+
+user$sudo -u mysql -s
+
+mysql$mysqld --skip-grant-tables --skip-networking
+
+mysql&gt;UPDATE mysql.user SET Password=PASSWORD('something') WHERE User='someone'
+
+mysql&gt;FLUSH PRIVILEGES
+
+mysql&gt;exit;
+
+mysql$exit
+
+user$sudo kill 'mysql process'
+
+user$sudo service mysql restart# How does it work?</code></pre>
+</div>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -433,136 +555,6 @@ conv_table &amp;lt;- conv_cross$prop.row
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/20/start-denyhosts-on-amazon-aws/">Start Denyhosts on Amazon Aws</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-20T00:00:00-06:00" pubdate data-updated="true">Jan 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>Starting DenyHosts on Amazon AWS micro instance</h2>
-
-<p>If denyhosts is not starting with&#8230;</p>
-
-<div>
-  <pre><code class='bash'>ImportError: No module named DenyHosts.python_version</code></pre>
-</div>
-
-
-<p>After you install it with yum, copy the DenyHosts directory from the python2.4 (which may have come along in the install) site_packages directory to the python2.6 (or whatever) site_packages directory.</p>
-
-<p>From:
-<a href="http://www.linuxscope.com/~ptader/?p=232">Reactive, unmediated, immediate opinion. » DenyHosts “ImportError: No module named DenyHosts.python_version</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/19/ssh-to-nat-virtualbox/">Ssh to Nat Virtualbox</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-19T00:00:00-06:00" pubdate data-updated="true">Jan 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>Get to NAT networked Virtualbox guest from the host</h2>
-
-<p>Wanted to use Putty to get to an Ubuntu 11 server edition virtual machine guest running on VirtualBox Windows 7 host without using bridged networking.</p>
-
-<p>Make sure that an ssh server is installed and running on the VM.</p>
-
-<div>
-  <pre><code class='bash'>sudo apt-get install openssh-server</code></pre>
-</div>
-
-
-<p>Shutdown the VM.</p>
-
-<p>Then, in a windows command window, go to the VirtualBox program folder.</p>
-
-<div>
-  <pre><code class='bash'>VBoxManage.exe modifyvm &quot;VMnameInQuotes&quot; --natpf1 &quot;guestssh,tcp,,2222,,22&quot;</code></pre>
-</div>
-
-
-<p>To get access to a webserver like apache on the guest machine use&#8230;</p>
-
-<div>
-  <pre><code class='bash'>VBoxManage.exe modifyvm &quot;VMnameInQuotes&quot; --natpf1 &quot;guesthttp,tcp,,8080,,80&quot;</code></pre>
-</div>
-
-
-<p>If you want to use other ports, for Rails or Django or something, they will have to be set up to&#8230;</p>
-
-<div>
-  <pre><code class='bash'>VBoxManage.exe modifyvm &quot;VMnameInQuotes&quot; --natpf1 &quot;guestApp1,tcp,,8888,,8000&quot;</code></pre>
-</div>
-
-
-<p>Restart the VM.</p>
-
-<p>Connect with Putty using localhost port 2222.</p>
-
-<p>Connect with your browser using http://localhost:8080</p>
-
-<p><a href="http://dothow.blogspot.com/2010/11/nat-port-forwarding-in-virtualbox.html">How did I do that?: NAT Port forwarding in VirtualBox Windows Host</a></p>
-
-<p><a href="http://www.virtualbox.org/manual/ch06.html#natforward">VirtualBox Manual - Configuring port forwarding with NAT</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -578,6 +570,14 @@ conv_table &amp;lt;- conv_cross$prop.row
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/07/20/use-python-flask-server-through-nat-virtualbox-guest/">Use Python Flask Server Through Nat Virtualbox Guest</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/20/mysql-reset-root-passwords/">Mysql Reset Root Passwords</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/05/12/mysql-get-all-table-row-counts/">Mysql Get All Table Row Counts</a>
       </li>
     
@@ -587,14 +587,6 @@ conv_table &amp;lt;- conv_cross$prop.row
     
       <li class="post">
         <a href="/blog/2012/02/28/get-decimal-results-in-python-division/">Get Decimal Results In Python Division</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/02/24/debian-rc-local-example-for-automounting-virtualbox-shared-folders/">Debian Rc Local Example For Automounting Virtualbox Shared Folders</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/02/23/rake-on-crunchbang/">rake on crunchbang</a>
       </li>
     
   </ul>

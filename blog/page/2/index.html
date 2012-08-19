@@ -9,7 +9,7 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Included file &#8216;JB/setup&#8217; not found in _includes directory sql query to remove whitespace and quotation marks works in sqlite and mysql, &hellip;">
+  <meta name="description" content="Included file &#8216;JB/setup&#8217; not found in _includes directory Starting DenyHosts on Amazon AWS micro instance If denyhosts is not starting &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,136 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/20/start-denyhosts-on-amazon-aws/">Start Denyhosts on Amazon Aws</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-20T00:00:00-06:00" pubdate data-updated="true">Jan 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>Starting DenyHosts on Amazon AWS micro instance</h2>
+
+<p>If denyhosts is not starting with&#8230;</p>
+
+<div>
+  <pre><code class='bash'>ImportError: No module named DenyHosts.python_version</code></pre>
+</div>
+
+
+<p>After you install it with yum, copy the DenyHosts directory from the python2.4 (which may have come along in the install) site_packages directory to the python2.6 (or whatever) site_packages directory.</p>
+
+<p>From:
+<a href="http://www.linuxscope.com/~ptader/?p=232">Reactive, unmediated, immediate opinion. » DenyHosts “ImportError: No module named DenyHosts.python_version</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/19/ssh-to-nat-virtualbox/">Ssh to Nat Virtualbox</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-19T00:00:00-06:00" pubdate data-updated="true">Jan 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>Get to NAT networked Virtualbox guest from the host</h2>
+
+<p>Wanted to use Putty to get to an Ubuntu 11 server edition virtual machine guest running on VirtualBox Windows 7 host without using bridged networking.</p>
+
+<p>Make sure that an ssh server is installed and running on the VM.</p>
+
+<div>
+  <pre><code class='bash'>sudo apt-get install openssh-server</code></pre>
+</div>
+
+
+<p>Shutdown the VM.</p>
+
+<p>Then, in a windows command window, go to the VirtualBox program folder.</p>
+
+<div>
+  <pre><code class='bash'>VBoxManage.exe modifyvm &quot;VMnameInQuotes&quot; --natpf1 &quot;guestssh,tcp,,2222,,22&quot;</code></pre>
+</div>
+
+
+<p>To get access to a webserver like apache on the guest machine use&#8230;</p>
+
+<div>
+  <pre><code class='bash'>VBoxManage.exe modifyvm &quot;VMnameInQuotes&quot; --natpf1 &quot;guesthttp,tcp,,8080,,80&quot;</code></pre>
+</div>
+
+
+<p>If you want to use other ports, for Rails or Django or something, they will have to be set up to&#8230;</p>
+
+<div>
+  <pre><code class='bash'>VBoxManage.exe modifyvm &quot;VMnameInQuotes&quot; --natpf1 &quot;guestApp1,tcp,,8888,,8000&quot;</code></pre>
+</div>
+
+
+<p>Restart the VM.</p>
+
+<p>Connect with Putty using localhost port 2222.</p>
+
+<p>Connect with your browser using http://localhost:8080</p>
+
+<p><a href="http://dothow.blogspot.com/2010/11/nat-port-forwarding-in-virtualbox.html">How did I do that?: NAT Port forwarding in VirtualBox Windows Host</a></p>
+
+<p><a href="http://www.virtualbox.org/manual/ch06.html#natforward">VirtualBox Manual - Configuring port forwarding with NAT</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -462,109 +592,6 @@ sudo mount /dev/cdrom -t iso9660 -r /media/cdrom</code></pre>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/11/install-wkhtmltopdf-on-amazon-aws/">Install Wkhtmltopdf on Amazon Aws</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-11T00:00:00-06:00" pubdate data-updated="true">Jan 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>to install wkhtmltopdf on AWS micro linux</h2>
-
-<p>Use yum to install font-config and urw-fonts. This dealt with the &#8220;wkhtmltopdf: error while loading shared libraries: libfontconfig.so.1: cannot open shared object file: No such file or directory&#8221; error and the output pdf only having squares instead of readable characters.</p>
-
-<p>Download the proper static binary from <a href="http://code.google.com/p/wkhtmltopdf/downloads/list">http://code.google.com/p/wkhtmltopdf/downloads/list</a>. Make sure that you know if you are running on a 32 or 64 bit system.</p>
-
-<p>Untar the downloaded file. Optionally, rename the binary to something without the extra information.</p>
-
-<p>Copy or move the binary file to /usr/bin</p>
-
-<p>help from</p>
-
-<p><a href="http://code.google.com/p/wkhtmltopdf/wiki/static">http://code.google.com/p/wkhtmltopdf/wiki/static</a></p>
-
-<p><a href="http://code.google.com/p/wkhtmltopdf/issues/detail?id=222">http://code.google.com/p/wkhtmltopdf/issues/detail?id=222</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/10/install-matplotlib-on-debian-testing/">Install Matplotlib on Debian Testing</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-10T00:00:00-06:00" pubdate data-updated="true">Jan 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>installing matplotlib on debian testing</h2>
-
-<p>what a pain&#8230;</p>
-
-<p>more notes later, but I installed with pip.</p>
-
-<p>Required the installing or updating following packages through apt-get before it would install and work in ipython (I think - and check versions to make sure in future)</p>
-
-<p><em>numpy
-</em>python-dateutil
-<em>python-dev
-</em>libfreetype6-dev
-<em>gcc
-</em>g++</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -582,6 +609,14 @@ sudo mount /dev/cdrom -t iso9660 -r /media/cdrom</code></pre>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/07/20/use-python-flask-server-through-nat-virtualbox-guest/">Use Python Flask Server Through Nat Virtualbox Guest</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/20/mysql-reset-root-passwords/">Mysql Reset Root Passwords</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/05/12/mysql-get-all-table-row-counts/">Mysql Get All Table Row Counts</a>
       </li>
     
@@ -591,14 +626,6 @@ sudo mount /dev/cdrom -t iso9660 -r /media/cdrom</code></pre>
     
       <li class="post">
         <a href="/blog/2012/02/28/get-decimal-results-in-python-division/">Get Decimal Results In Python Division</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/02/24/debian-rc-local-example-for-automounting-virtualbox-shared-folders/">Debian Rc Local Example For Automounting Virtualbox Shared Folders</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/02/23/rake-on-crunchbang/">rake on crunchbang</a>
       </li>
     
   </ul>

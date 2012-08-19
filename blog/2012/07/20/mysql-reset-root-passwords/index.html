@@ -1,0 +1,22 @@
+<div>
+  <pre><code class='bash'>user$sudo service mysql stop
+
+user$sudo -u mysql -s
+
+mysql$mysqld --skip-grant-tables --skip-networking
+
+mysql&gt;UPDATE mysql.user SET Password=PASSWORD('something') WHERE User='someone'
+
+mysql&gt;FLUSH PRIVILEGES
+
+mysql&gt;exit;
+
+mysql$exit
+
+user$sudo kill 'mysql process'
+
+user$sudo service mysql restart# How does it work?</code></pre>
+</div>
+
+
+
