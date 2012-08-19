@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: blog | My Octopress Blog]]></title>
+  <title><![CDATA[Category: blog | Reference Chunks]]></title>
   <link href="http://dnfehren.github.com/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://dnfehren.github.com/"/>
-  <updated>2012-08-19T16:29:37-05:00</updated>
+  <updated>2012-08-19T16:36:24-05:00</updated>
   <id>http://dnfehren.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Dan Fehrenbach]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -33,7 +33,7 @@ SELECT table_name, TABLE_ROWS FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA 
     <link href="http://dnfehren.github.com/blog/2012/03/20/changing-linux-terminal-highlighting-for-file-types/"/>
     <updated>2012-03-20T00:00:00-05:00</updated>
     <id>http://dnfehren.github.com/blog/2012/03/20/changing-linux-terminal-highlighting-for-file-types</id>
-    <content type="html"><![CDATA[<p>{% include JB/setup %}</p>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
 
 <h2>Alter colors for file types in linux terminal</h2>
 
@@ -62,16 +62,17 @@ SELECT table_name, TABLE_ROWS FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA 
     <link href="http://dnfehren.github.com/blog/2012/02/28/get-decimal-results-in-python-division/"/>
     <updated>2012-02-28T00:00:00-06:00</updated>
     <id>http://dnfehren.github.com/blog/2012/02/28/get-decimal-results-in-python-division</id>
-    <content type="html"><![CDATA[<p>{% include JB/setup %}</p>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
 
 <p>Use float() to get decimal answers to division fuctions in python</p>
 
-<p>{% highlight python %}
-some_data_value = 100
+<p><div>
+  <pre><code class='python'>some_data_value = 100
 1 / float(some_data_value) #returns 0.01
 1 / 100.0 #also returns 0.01
-float(1/100) #returns 0.0, which is a float, but might not be what you wanted
-{% endhighlight %}</p>
+float(1/100) #returns 0.0, which is a float, but might not be what you wanted</code></pre>
+</div>
+</p>
 ]]></content>
   </entry>
   
@@ -80,7 +81,7 @@ float(1/100) #returns 0.0, which is a float, but might not be what you wanted
     <link href="http://dnfehren.github.com/blog/2012/02/24/debian-rc-local-example-for-automounting-virtualbox-shared-folders/"/>
     <updated>2012-02-24T00:00:00-06:00</updated>
     <id>http://dnfehren.github.com/blog/2012/02/24/debian-rc-local-example-for-automounting-virtualbox-shared-folders</id>
-    <content type="html"><![CDATA[<p>{% include JB/setup %}</p>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
 
 <h2>Automatically mounting virtuabox shared folders when the guest starts, with read and write permissions</h2>
 
@@ -99,7 +100,7 @@ float(1/100) #returns 0.0, which is a float, but might not be what you wanted
     <link href="http://dnfehren.github.com/blog/2012/02/01/access-properties-of-r-crosstable/"/>
     <updated>2012-02-01T00:00:00-06:00</updated>
     <id>http://dnfehren.github.com/blog/2012/02/01/access-properties-of-r-crosstable</id>
-    <content type="html"><![CDATA[<p>{% include JB/setup %}</p>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
 
 <h2>Accessing properties of CrossTable</h2>
 
