@@ -9,7 +9,7 @@
   <meta name="author" content="Dan Fehrenbach">
 
   
-  <meta name="description" content="Included file &#8216;JB/setup&#8217; not found in _includes directory Starting DenyHosts on Amazon AWS micro instance If denyhosts is not starting &hellip;">
+  <meta name="description" content="Included file &#8216;JB/setup&#8217; not found in _includes directory Accessing properties of CrossTable conv_cross &amp;lt;- CrossTable(data_set$ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,96 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/01/access-properties-of-r-crosstable/">Access Properties of R Crosstable</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-01T00:00:00-06:00" pubdate data-updated="true">Feb 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>Accessing properties of CrossTable</h2>
+
+<pre><code>conv_cross &amp;lt;- CrossTable(data_set$col1, data_set$col2)
+conv_table &amp;lt;- conv_cross$prop.row
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/21/start-or-stop-mysql-on-debian/">Start or Stop Mysql on Debian</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-21T00:00:00-06:00" pubdate data-updated="true">Jan 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+
+<h2>If you can&#8217;t use init.d to stop/start/restart mysql server on Debian</h2>
+
+<p>Debian (or CrunchBang) repository installs of mysql create a debian-sys-maint user that is used to startup and shutdown the database server via the /etc/init.d/mysql script. If you import all databases from another server, including the mysql database, this will be overwritten and init.d won&#8217;t work. So either don&#8217;t import the users table or add the debian-sys-maint users back in at the end, the user should have SHUTDOWN and SELECT privileges but doesn&#8217;t need others.</p>
+
+<p><a href="http://dev.mysql.com/doc/refman/5.0/en/resetting-permissions.html#resetting-permissions-unix">http://dev.mysql.com/doc/refman/5.0/en/resetting-permissions.html#resetting-permissions-unix</a></p>
+
+<p><a href="http://www.linuxquestions.org/questions/linux-software-2/mysql-debian-sys-maint-password-changed-by-accident-possible-to-change-it-back-216586/">mysql: debian-sys-maint password changed by accident, possible to change it back?</a></p>
+
+<p><a href="http://serverfault.com/questions/32692/cant-start-stop-mysql-service">http://serverfault.com/questions/32692/cant-start-stop-mysql-service</a></p>
+
+<p><a href="http://www.debian-administration.org/articles/442">http://www.debian-administration.org/articles/442</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -468,9 +558,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>pyMongo update $rename requires 4 bool arguments</h2>
+  <div class="entry-content"><h2>pyMongo update $rename requires 4 bool arguments</h2>
 
 <p>this works on the command line for collection-wide rename:</p>
 
@@ -502,96 +590,6 @@ True
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/12/phpmyadmin-date-formatting/">Phpmyadmin Date Formatting</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-12T00:00:00-06:00" pubdate data-updated="true">Jan 12<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>myphpadmin date formating</h2>
-
-<p>for exporting with a date in the file name use</p>
-
-<p>[export_file_name_whatever]<em>%G</em>%m_%d</p>
-
-<p>results in&#8230;</p>
-
-<p>file_name_2011_04_28</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/11/linux-cli-cdrom-access/">Linux Cli Cdrom Access</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-11T00:00:00-06:00" pubdate data-updated="true">Jan 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>Linux command line cdrom access</h2>
-
-<div>
-  <pre><code class='bash'>sudo lshw -C disk
-sudo mount /dev/cdrom -t iso9660 -r /media/cdrom</code></pre>
-</div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -609,6 +607,14 @@ sudo mount /dev/cdrom -t iso9660 -r /media/cdrom</code></pre>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/13/tmux-scroll-shell-output-with-mouse/">Scroll shell output with mousewheel in tmux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/13/git-overwrite-local-files-if-changed-from-remote/">Overwrite local files if your local git repository is different than the remote</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/07/20/use-python-flask-server-through-nat-virtualbox-guest/">Forward flask server through NAT virtualbox guest</a>
       </li>
     
@@ -618,14 +624,6 @@ sudo mount /dev/cdrom -t iso9660 -r /media/cdrom</code></pre>
     
       <li class="post">
         <a href="/blog/2012/05/12/mysql-get-all-table-row-counts/">Mysql Get All Table Row Counts</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/20/changing-linux-terminal-highlighting-for-file-types/">Changing Linux Terminal Highlighting For File Types</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/02/28/get-decimal-results-in-python-division/">Get Decimal Results In Python Division</a>
       </li>
     
   </ul>

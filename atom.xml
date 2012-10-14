@@ -4,7 +4,7 @@
   <title><![CDATA[Reference Chunks]]></title>
   <link href="http://dnfehren.github.com/atom.xml" rel="self"/>
   <link href="http://dnfehren.github.com/"/>
-  <updated>2012-08-19T16:36:24-05:00</updated>
+  <updated>2012-10-13T20:26:07-05:00</updated>
   <id>http://dnfehren.github.com/</id>
   <author>
     <name><![CDATA[Dan Fehrenbach]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Scroll shell output with mousewheel in tmux]]></title>
+    <link href="http://dnfehren.github.com/blog/2012/10/13/tmux-scroll-shell-output-with-mouse/"/>
+    <updated>2012-10-13T12:00:00-05:00</updated>
+    <id>http://dnfehren.github.com/blog/2012/10/13/tmux-scroll-shell-output-with-mouse</id>
+    <content type="html"><![CDATA[<p>add the below to the tmux config</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>setw -g mode-mouse on</span></code></pre></td></tr></table></div></figure>
+
+
+<p>References
+http://superuser.com/questions/210125/scroll-shell-output-with-mouse-in-tmux</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Overwrite local files if your local git repository is different than the remote]]></title>
+    <link href="http://dnfehren.github.com/blog/2012/10/13/git-overwrite-local-files-if-changed-from-remote/"/>
+    <updated>2012-10-13T12:00:00-05:00</updated>
+    <id>http://dnfehren.github.com/blog/2012/10/13/git-overwrite-local-files-if-changed-from-remote</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git fetch --all
+</span><span class='line'>git reset --hard origin/master</span></code></pre></td></tr></table></div></figure>
+
+
+<p>References
+http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Forward flask server through NAT virtualbox guest]]></title>
@@ -455,9 +487,7 @@ conv_table &amp;lt;- conv_cross$prop.row
     <link href="http://dnfehren.github.com/blog/2012/01/13/pymongo-rename-needs-4-arguments/"/>
     <updated>2012-01-13T00:00:00-06:00</updated>
     <id>http://dnfehren.github.com/blog/2012/01/13/pymongo-rename-needs-4-arguments</id>
-    <content type="html"><![CDATA[<p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>pyMongo update $rename requires 4 bool arguments</h2>
+    <content type="html"><![CDATA[<h2>pyMongo update $rename requires 4 bool arguments</h2>
 
 <p>this works on the command line for collection-wide rename:</p>
 
@@ -482,42 +512,6 @@ True
 <p><a href="http://www.mongodb.org/display/DOCS/Updating#Updating-update%28%29">Updating - MongoDB</a></p>
 
 <p><a href="http://api.mongodb.org/python/current/api/pymongo/collection.html#pymongo.collection.Collection.update">collection – Collection level operations — PyMongo v2.0.1 documentation</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Phpmyadmin Date Formatting]]></title>
-    <link href="http://dnfehren.github.com/blog/2012/01/12/phpmyadmin-date-formatting/"/>
-    <updated>2012-01-12T00:00:00-06:00</updated>
-    <id>http://dnfehren.github.com/blog/2012/01/12/phpmyadmin-date-formatting</id>
-    <content type="html"><![CDATA[<p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>myphpadmin date formating</h2>
-
-<p>for exporting with a date in the file name use</p>
-
-<p>[export_file_name_whatever]<em>%G</em>%m_%d</p>
-
-<p>results in&#8230;</p>
-
-<p>file_name_2011_04_28</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Linux Cli Cdrom Access]]></title>
-    <link href="http://dnfehren.github.com/blog/2012/01/11/linux-cli-cdrom-access/"/>
-    <updated>2012-01-11T00:00:00-06:00</updated>
-    <id>http://dnfehren.github.com/blog/2012/01/11/linux-cli-cdrom-access</id>
-    <content type="html"><![CDATA[<p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
-
-<h2>Linux command line cdrom access</h2>
-
-<div>
-  <pre><code class='bash'>sudo lshw -C disk
-sudo mount /dev/cdrom -t iso9660 -r /media/cdrom</code></pre>
-</div>
-
 ]]></content>
   </entry>
   
